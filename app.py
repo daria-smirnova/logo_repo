@@ -51,6 +51,7 @@ def upload_file():
 
 if __name__ == "__main__":
     #Show a path to weights of your model here
-    model = torch.hub.load('ultralytics/yolov5', 'custom', path='D:\\Logo_YOLO\\yolov5\\runs\\train\\yolo_logo_detection\\weights\\best.pt',force_reload = True)
+    model = torch.hub.load('ultralytics/yolov5', 'custom', path='D:\\website\\weights\\yolov5s320.pt', force_reload=True)
+    model.conf = 0.533
     model.eval()
     app.run()
